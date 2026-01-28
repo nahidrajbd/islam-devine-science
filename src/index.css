@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Islam & Sciences - Traditional Islamic Design System
+   Colors: Deep greens, rich golds, royal blues with cream/ivory backgrounds
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cream/Ivory background for warmth */
+    --background: 40 33% 96%;
+    --foreground: 160 30% 15%;
+
+    /* Cards with subtle warm tint */
+    --card: 40 40% 98%;
+    --card-foreground: 160 30% 15%;
+
+    --popover: 40 40% 98%;
+    --popover-foreground: 160 30% 15%;
+
+    /* Primary: Deep Islamic Green */
+    --primary: 158 64% 25%;
+    --primary-foreground: 40 40% 98%;
+
+    /* Secondary: Royal Blue */
+    --secondary: 215 55% 35%;
+    --secondary-foreground: 40 40% 98%;
+
+    /* Muted: Soft sage */
+    --muted: 160 20% 90%;
+    --muted-foreground: 160 15% 40%;
+
+    /* Accent: Rich Gold */
+    --accent: 43 85% 50%;
+    --accent-foreground: 160 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 20% 85%;
+    --input: 160 20% 85%;
+    --ring: 158 64% 25%;
+
+    --radius: 0.5rem;
+
+    /* Custom Islamic theme colors */
+    --islamic-green: 158 64% 25%;
+    --islamic-green-light: 158 45% 40%;
+    --islamic-gold: 43 85% 50%;
+    --islamic-gold-light: 43 75% 65%;
+    --islamic-blue: 215 55% 35%;
+    --islamic-blue-light: 215 45% 50%;
+    --islamic-cream: 40 33% 96%;
+    --islamic-ivory: 40 40% 98%;
+    --islamic-brown: 30 30% 25%;
+
+    --sidebar-background: 158 64% 20%;
+    --sidebar-foreground: 40 40% 98%;
+    --sidebar-primary: 43 85% 50%;
+    --sidebar-primary-foreground: 160 30% 15%;
+    --sidebar-accent: 158 45% 30%;
+    --sidebar-accent-foreground: 40 40% 98%;
+    --sidebar-border: 158 40% 30%;
+    --sidebar-ring: 43 85% 50%;
+  }
+
+  .dark {
+    --background: 160 30% 8%;
+    --foreground: 40 33% 96%;
+
+    --card: 160 25% 12%;
+    --card-foreground: 40 33% 96%;
+
+    --popover: 160 25% 12%;
+    --popover-foreground: 40 33% 96%;
+
+    --primary: 158 55% 45%;
+    --primary-foreground: 160 30% 8%;
+
+    --secondary: 215 45% 50%;
+    --secondary-foreground: 40 33% 96%;
+
+    --muted: 160 20% 18%;
+    --muted-foreground: 160 15% 65%;
+
+    --accent: 43 80% 55%;
+    --accent-foreground: 160 30% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 20% 20%;
+    --input: 160 20% 20%;
+    --ring: 158 55% 45%;
+
+    --sidebar-background: 160 30% 10%;
+    --sidebar-foreground: 40 40% 98%;
+    --sidebar-primary: 43 80% 55%;
+    --sidebar-primary-foreground: 160 30% 8%;
+    --sidebar-accent: 160 25% 18%;
+    --sidebar-accent-foreground: 40 40% 98%;
+    --sidebar-border: 160 20% 20%;
+    --sidebar-ring: 43 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Islamic Geometric Pattern Background */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23166534' fill-opacity='0.05'%3E%3Cpath d='M30 0L60 30L30 60L0 30z M30 10L50 30L30 50L10 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Decorative border pattern */
+.islamic-border {
+  border-image: repeating-linear-gradient(
+    90deg,
+    hsl(var(--islamic-gold)) 0px,
+    hsl(var(--islamic-gold)) 10px,
+    hsl(var(--islamic-green)) 10px,
+    hsl(var(--islamic-green)) 20px
+  ) 1;
+}
+
+/* Gold gradient for headings */
+.gold-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--islamic-gold)) 0%,
+    hsl(var(--islamic-gold-light)) 50%,
+    hsl(var(--islamic-gold)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Elegant card shadow */
+.islamic-shadow {
+  box-shadow: 0 4px 20px -5px hsl(var(--islamic-green) / 0.15),
+              0 2px 8px -2px hsl(var(--islamic-gold) / 0.1);
+}
+
+/* Arabic/Islamic font styling */
+.arabic-accent {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+}
+
+/* Quranic verse styling */
+.quran-verse {
+  @apply italic text-lg leading-relaxed;
+  font-family: 'Amiri', serif;
+}
+
+/* Decorative divider */
+.islamic-divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--islamic-gold)) 20%,
+    hsl(var(--islamic-green)) 50%,
+    hsl(var(--islamic-gold)) 80%,
+    transparent 100%
+  );
+}
