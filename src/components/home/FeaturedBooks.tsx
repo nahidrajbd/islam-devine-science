@@ -47,7 +47,7 @@ export function FeaturedBooks() {
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
           {books.map((book) => (
             <Card key={book.title} className="border-2 border-primary/20 h-full flex flex-col">
               <CardHeader className="pb-2">
