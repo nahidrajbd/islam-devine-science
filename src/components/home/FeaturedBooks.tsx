@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import charityBookCover from "@/assets/TheEternalPathofCharity.png";
 import scienceBookCover from "@/assets/NaturalSciencesintheMirrorofIslam.png";
 import arabicBookCover from "@/assets/arabic-book-by-zin-eddine.png";
+import scienceArabicBookCover from "@/assets/natural-science-in-the-mirror-of-islam.png";
 
 const books = [
   {
@@ -22,7 +23,7 @@ const books = [
     title: "الاسلام والعلوم الطبيعية",
     description: "كتاب \"الإسلام والعلوم الطبيعية\" يبيّن أن قوانين الكون هي سنن إلهية، وأن دراسة العلوم طريق لمعرفة عظمة الخالق وتعميق اليقين بالتوحيد.",
     link: "#",
-    cover: scienceBookCover,
+    cover: scienceArabicBookCover,
   },
   {
     title: "Natural Sciences in the Mirror of Islam",
