@@ -1,38 +1,41 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, BookOpen, Users, Lightbulb, HandHeart, Scale } from "lucide-react";
+import { FileText, HandHeart, Scale, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const teachings = [
+// Import PDF files
+import habitsOfProphetPdf from "@/assets/chapters/Prophet_Muhammad/HABITS_OF_THE_PROPHET_MUHAMMAD_THAT_SCIE.pdf";
+import healthyHabitsPdf from "@/assets/chapters/Prophet_Muhammad/HEALTYH_HABITS_OF_THE_PROHET.pdf";
+import medicinePdf from "@/assets/chapters/Prophet_Muhammad/MEDICINE_OF_THE_PROPHET.pdf";
+import scienceSayingsPdf from "@/assets/chapters/Prophet_Muhammad/SCIENCE_AND_THE_PROPHETS_SAYINGS.pdf";
+import leadershipPdf from "@/assets/chapters/Prophet_Muhammad/Top_Leadership_Qualities_of_the_Holy_Pro.pdf";
+import teachingMethodsPdf from "@/assets/chapters/Prophet_Muhammad/teachings_of_the_prophet.pdf";
+
+const researchPapers = [
   {
-    title: "Teaching with Wisdom",
-    description: "The Prophet (PBUH) used parables, examples, and stories to convey complex ideas in understandable ways.",
-    icon: Lightbulb,
+    title: "Habits of the Prophet Muhammad that Science Supports",
+    pdfFile: habitsOfProphetPdf,
   },
   {
-    title: "Leading by Example",
-    description: "He demonstrated every teaching through his own actions, making his words come alive.",
-    icon: Users,
+    title: "Healthy Habits of the Prophet",
+    pdfFile: healthyHabitsPdf,
   },
   {
-    title: "Patience and Repetition",
-    description: "He would repeat important points three times and always spoke at a pace that allowed understanding.",
-    icon: BookOpen,
+    title: "Medicine of the Prophet",
+    pdfFile: medicinePdf,
   },
   {
-    title: "Asking Questions",
-    description: "He often posed questions to engage his companions and stimulate their thinking.",
-    icon: Lightbulb,
+    title: "Science and the Prophet's Sayings",
+    pdfFile: scienceSayingsPdf,
   },
   {
-    title: "Individual Attention",
-    description: "He gave personalized advice based on each person's circumstances and abilities.",
-    icon: Heart,
+    title: "Top Leadership Qualities of the Holy Prophet",
+    pdfFile: leadershipPdf,
   },
   {
-    title: "Encouraging Discussion",
-    description: "He welcomed questions and created an environment where learning was valued.",
-    icon: Users,
+    title: "6 Teaching Methods of Prophet Muhammad (PBUH)",
+    pdfFile: teachingMethodsPdf,
   },
 ];
 
@@ -55,7 +58,7 @@ const ProphetMuhammad = () => {
             <Card className="border-2 border-primary/20">
               <CardContent className="p-8 text-center space-y-4">
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Prophet Muhammad (Peace Be Upon Him) was sent as a mercy to all of mankind. 
+                  Prophet Muhammad (Peace Be Upon Him) was sent as a mercy to all of mankind.
                   His life exemplifies the perfect balance of worship, compassion, justice, and wisdom.
                 </p>
                 <div className="islamic-divider mx-auto max-w-xs" />
@@ -66,28 +69,40 @@ const ProphetMuhammad = () => {
               </CardContent>
             </Card>
 
-            {/* Teaching Methods */}
+            {/* Research Papers */}
             <div className="space-y-6">
               <h2 className="font-heading text-2xl font-bold text-foreground text-center">
-                6 Teaching Methods of Prophet Muhammad (PBUH)
+                The researches about Prophet Muhammad (PBUH) by Zin Eddine Dadach
               </h2>
               <div className="text-center mb-6">
                 <p className="text-sm text-muted-foreground italic">
-                  "They said: 'Glory to You! We have no knowledge except what You taught us. 
+                  "They said: 'Glory to You! We have no knowledge except what You taught us.
                   You, indeed You, are the All-Knowing, the Wise.'" — Quran 2:32
                 </p>
               </div>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {teachings.map((teaching) => (
-                  <Card key={teaching.title} className="border-2 border-border/50 hover:border-primary/30 transition-colors islamic-shadow">
+                {researchPapers.map((paper) => (
+                  <Card key={paper.title} className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group">
                     <CardHeader className="text-center pb-2">
-                      <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                        <teaching.icon className="h-6 w-6 text-primary" />
+                      <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
+                        <FileText className="h-6 w-6 text-primary" />
                       </div>
-                      <CardTitle className="font-heading text-base">{teaching.title}</CardTitle>
+                      <CardTitle className="font-heading text-base leading-snug">{paper.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center">
-                      <p className="text-sm text-muted-foreground">{teaching.description}</p>
+                      <Button
+                        asChild
+                        className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+                      >
+                        <a
+                          href={paper.pdfFile}
+                          download
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Download className="h-4 w-4" />
+                          Download PDF
+                        </a>
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
@@ -106,8 +121,8 @@ const ProphetMuhammad = () => {
                       Charity as Taught by the Prophet
                     </h3>
                     <p className="text-foreground/80">
-                      Prophet Muhammad (PBUH) said: "All creatures are the dependents of Allah, 
-                      and the most beloved of creatures to Allah is the one who is most beneficial 
+                      Prophet Muhammad (PBUH) said: "All creatures are the dependents of Allah,
+                      and the most beloved of creatures to Allah is the one who is most beneficial
                       to His dependents."
                     </p>
                   </div>
@@ -127,9 +142,9 @@ const ProphetMuhammad = () => {
                       Rejecting Nepotism, Classism, and Racism
                     </h3>
                     <p className="text-foreground/80">
-                      The Prophet (PBUH) declared in his farewell sermon: "All mankind is from Adam 
-                      and Eve. An Arab has no superiority over a non-Arab, nor does a non-Arab have 
-                      any superiority over an Arab; a white has no superiority over a black, nor does 
+                      The Prophet (PBUH) declared in his farewell sermon: "All mankind is from Adam
+                      and Eve. An Arab has no superiority over a non-Arab, nor does a non-Arab have
+                      any superiority over an Arab; a white has no superiority over a black, nor does
                       a black have any superiority over a white; except by piety and good action."
                     </p>
                   </div>
