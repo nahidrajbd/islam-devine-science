@@ -121,6 +121,22 @@ export function AuthorSection() {
               </a>
             ))}
           </div>
+
+          {/* Personal Website Button */}
+          <div className="pt-3">
+            <Button
+              asChild
+              className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+            >
+              <a
+                href="https://www.zineddinedadach.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Personal Website
+              </a>
+            </Button>
+          </div>
         </CardContent>
       </Card>
 
