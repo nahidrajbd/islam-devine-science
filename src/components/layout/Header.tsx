@@ -12,10 +12,9 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Discover Islam", href: "/discover-islam" },
-  { name: "Islam & Science", href: "/islam-science" },
   { name: "Prophet Muhammad (SAW)", href: "/prophet-muhammad" },
   { name: "Divine Forces & Laws", href: "/divine-forces" },
-  { name: "Sciences", href: "/sciences" },
+  { name: "Natural Sciences", href: "/sciences" },
   { name: "Blog", href: "/blog" },
 ];
 

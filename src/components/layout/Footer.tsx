@@ -14,7 +14,7 @@ const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Discover Islam", href: "/discover-islam" },
-  { name: "Islam & Science", href: "/islam-science" },
+  { name: "Natural Sciences", href: "/sciences" },
   { name: "Blog", href: "/blog" },
 ];
 

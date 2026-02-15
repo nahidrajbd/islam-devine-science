@@ -72,7 +72,7 @@ const ProphetMuhammad = () => {
             {/* Research Papers */}
             <div className="space-y-6">
               <h2 className="font-heading text-2xl font-bold text-foreground text-center">
-                The researches about Prophet Muhammad (PBUH) by Zin Eddine Dadach
+                The research about Prophet Muhammad (PBUH) by Zin Eddine Dadach
               </h2>
               <div className="text-center mb-6">
                 <p className="text-sm text-muted-foreground italic">
