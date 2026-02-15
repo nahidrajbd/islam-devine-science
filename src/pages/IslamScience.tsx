@@ -1,7 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Atom, Leaf, Mountain, Calculator, FlaskConical, Globe } from "lucide-react";
+import { Atom, Leaf, Mountain, Calculator, FlaskConical, Globe, FileText, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const scienceAreas = [
   {
@@ -27,6 +28,29 @@ const scienceAreas = [
     description: "Geography, cartography, and geology were pioneered by Muslim explorers and scholars.",
     icon: Mountain,
     contributions: ["Astronomy", "World Maps", "Mineral Classification", "Climate Studies"],
+  },
+];
+
+const researchPapers = [
+  {
+    title: "THE FOUNDATION OF ISLAM",
+    downloadUrl: "https://drive.google.com/file/d/1eWK2eDXl_LBTunekNKJ7x4NfwfMW1k-s/view?usp=sharing",
+  },
+  {
+    title: "The Creator (SWT)",
+    downloadUrl: "https://drive.google.com/file/d/1pTD6-KFC-k82REQ9T7Nc41VCwZk4J-g_/view?usp=sharing",
+  },
+  {
+    title: "Need for Re-Islamization of Science",
+    downloadUrl: "https://drive.google.com/file/d/1f4h6t47RA3XLUlarPzJkqVnM9ZC8Ein5/view?usp=sharing",
+  },
+  {
+    title: "Islamic Approach to Science",
+    downloadUrl: "https://drive.google.com/file/d/1FzddCf9UgFG7wrg7GKf_YNocgP8hedwc/view?usp=sharing",
+  },
+  {
+    title: "Islam & Science",
+    downloadUrl: "https://drive.google.com/file/d/1HakP8Z3uK0EtCB2d0i_yx2-T4ypYXiiz/view?usp=sharing",
   },
 ];
 
@@ -110,6 +134,52 @@ const IslamScience = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Research Papers */}
+            <div className="space-y-6">
+              <h2 className="font-heading text-2xl font-bold text-foreground text-center">
+                Research by Zin Eddine Dadach
+              </h2>
+              <div className="text-center mb-6">
+                <p className="text-sm text-muted-foreground italic">
+                  "They said: 'Glory to You! We have no knowledge except what You taught us.
+                  You, indeed You, are the All-Knowing, the Wise.'" — Quran 2:32
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {researchPapers.map((paper) => (
+                  <Card
+                    key={paper.title}
+                    className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group"
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <CardTitle className="font-heading text-sm leading-snug">
+                          {paper.title}
+                        </CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Button
+                        asChild
+                        className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+                      >
+                        <a
+                          href={paper.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Download className="h-4 w-4" />
+                          Download PDF
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
 
             {/* 13 Scientific Facts */}

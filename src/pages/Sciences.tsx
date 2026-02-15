@@ -2,7 +2,8 @@ import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Calculator, Atom, Leaf, Mountain, FlaskConical, Globe } from "lucide-react";
+import { Calculator, Atom, Leaf, Mountain, FlaskConical, Globe, FileText, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const scienceCategories = [
   {
@@ -100,6 +101,41 @@ const scienceCategories = [
   },
 ];
 
+const researchPapers = [
+  {
+    title: "Divine Law of Conservation",
+    downloadUrl: "https://drive.google.com/file/d/1jD8ZP8lvLqH96xuA8XBwxSBH0lklKmBX/view?usp=sharing",
+  },
+  {
+    title: "Islam & Botany",
+    downloadUrl: "https://drive.google.com/file/d/1jhZ4m22m9lOdLA66F54mwlsd9nQN45q-/view?usp=sharing",
+  },
+  {
+    title: "Islam & Chemistry",
+    downloadUrl: "https://drive.google.com/file/d/1MnFq5w7XiH9HfcvfWe_9hhNcgBziAUM2/view?usp=sharing",
+  },
+  {
+    title: "Islam & Earth Sciences",
+    downloadUrl: "https://drive.google.com/file/d/1qfw3VBsGvLu8bNMHTJ0n9aWylURqMbeH/view?usp=sharing",
+  },
+  {
+    title: "Mathematics in Islam",
+    downloadUrl: "https://drive.google.com/file/d/1tssps9C4-MBWlteEp_3_nJenkfcmeYMZ/view?usp=sharing",
+  },
+  {
+    title: "Islam & Medical Sciences",
+    downloadUrl: "https://drive.google.com/file/d/10fVuc6HdBg1KRJDSJzef1JMUw0fUxAB6/view?usp=sharing",
+  },
+  {
+    title: "Physical Sciences",
+    downloadUrl: "https://drive.google.com/file/d/1XH4zNtA0vgV0N5P8BA1rOI1Y3ZPEx5AR/view?usp=sharing",
+  },
+  {
+    title: "Zoology in Islam",
+    downloadUrl: "https://drive.google.com/file/d/1lbj18bpBUmNkUfDz5AL3uzVCFVt7DR9a/view?usp=sharing",
+  },
+];
+
 const Sciences = () => {
   return (
     <Layout>
@@ -171,6 +207,52 @@ const Sciences = () => {
                 </p>
               </CardContent>
             </Card>
+
+            {/* Research Papers */}
+            <div className="space-y-6">
+              <h2 className="font-heading text-2xl font-bold text-foreground text-center">
+                Research by Zin Eddine Dadach
+              </h2>
+              <div className="text-center mb-6">
+                <p className="text-sm text-muted-foreground italic">
+                  "They said: 'Glory to You! We have no knowledge except what You taught us.
+                  You, indeed You, are the All-Knowing, the Wise.'" — Quran 2:32
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {researchPapers.map((paper) => (
+                  <Card
+                    key={paper.title}
+                    className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group"
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <CardTitle className="font-heading text-sm leading-snug">
+                          {paper.title}
+                        </CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Button
+                        asChild
+                        className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+                      >
+                        <a
+                          href={paper.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Download className="h-4 w-4" />
+                          Download PDF
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
 
             {/* Science Categories Tabs */}
             <Tabs defaultValue="mathematics" className="w-full">

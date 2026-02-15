@@ -1,7 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, Users, BookOpen, Heart } from "lucide-react";
+import { GraduationCap, Users, BookOpen, Heart, FileText, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const educationPrinciples = [
   {
@@ -23,6 +24,53 @@ const educationPrinciples = [
     title: "Lifelong Learning",
     description: "Seeking knowledge is obligatory from the cradle to the grave.",
     icon: GraduationCap,
+  },
+];
+
+const researchPapers = [
+  {
+    title: "THE ETERNAL PATH OF CHARITY",
+    downloadUrl: "https://drive.google.com/file/d/1cKvUAaCV0Yzx9vGkxH0eQbPTYLROGrje/view?usp=sharing",
+  },
+  {
+    title: "Tawhidic Paradigm",
+    downloadUrl: "https://drive.google.com/file/d/1wfMEnrzXPkCBrlRX36_yxgveZdtyF9gl/view?usp=sharing",
+  },
+  {
+    title: "Spirituality in Islam",
+    downloadUrl: "https://drive.google.com/file/d/1xQAxes4GkZB0H8Ih_tcZbhccAyMPW8GD/view?usp=sharing",
+  },
+  {
+    title: "Scientific facts in the Quran",
+    downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
+  },
+  {
+    title: "LEADERSHIP IN WORKPLACES",
+    downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
+  },
+  {
+    title: "Law of Balance",
+    downloadUrl: "https://drive.google.com/file/d/1lpzV3IMzf_mkpiXnlAHAcXyZo9f5EF51/view?usp=sharing",
+  },
+  {
+    title: "ISLAM-BASED EDUCATIONAL MODEL",
+    downloadUrl: "https://drive.google.com/file/d/1OgYnHdOUGZ2l4-nSIQ7iQnm-ztK_4ejs/view?usp=sharing",
+  },
+  {
+    title: "DIVINE FORCES AND LAWS IN MUSLIM SOCIETIES",
+    downloadUrl: "https://drive.google.com/file/d/10XHWKZGiV9y-prIFGuPELuoIZWOtpV91/view?usp=sharing",
+  },
+  {
+    title: "Divine Forces",
+    downloadUrl: "https://drive.google.com/file/d/1h7TgDDvxWG3nSg7k1GddALdd18kdm9DW/view?usp=sharing",
+  },
+  {
+    title: "CONSUMERISM & WARNINGS FROM THE MERCIFUL",
+    downloadUrl: "https://drive.google.com/file/d/1UZbfg8IJ8vdkzcnRpBUY5z34Fwzgeabp/view?usp=sharing",
+  },
+  {
+    title: "CHARITY IN WORKPLACES",
+    downloadUrl: "https://drive.google.com/file/d/1w_ng4_YgsZZb6fZtekO8XrOn0AaplH-p/view?usp=sharing",
   },
 ];
 
@@ -49,14 +97,14 @@ const SocialSciences = () => {
                 </h2>
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
                   <p>
-                    Since the Noble Quran is the book of Allah (SWT) and needed to be organically 
-                    integrated into every aspect of Muslim life, Islamic education has always 
+                    Since the Noble Quran is the book of Allah (SWT) and needed to be organically
+                    integrated into every aspect of Muslim life, Islamic education has always
                     emphasized the connection between knowledge and faith.
                   </p>
                   <p>
-                    The first word revealed to Prophet Muhammad (PBUH) was "Iqra" (Read), 
-                    establishing the importance of learning as a fundamental Islamic duty. 
-                    This divine instruction set the foundation for a civilization that would 
+                    The first word revealed to Prophet Muhammad (PBUH) was "Iqra" (Read),
+                    establishing the importance of learning as a fundamental Islamic duty.
+                    This divine instruction set the foundation for a civilization that would
                     lead the world in knowledge for centuries.
                   </p>
                 </div>
@@ -87,6 +135,52 @@ const SocialSciences = () => {
               </div>
             </div>
 
+            {/* Research Papers */}
+            <div className="space-y-6">
+              <h2 className="font-heading text-2xl font-bold text-foreground text-center">
+                Research by Zin Eddine Dadach
+              </h2>
+              <div className="text-center mb-6">
+                <p className="text-sm text-muted-foreground italic">
+                  "They said: 'Glory to You! We have no knowledge except what You taught us.
+                  You, indeed You, are the All-Knowing, the Wise.'" — Quran 2:32
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {researchPapers.map((paper) => (
+                  <Card
+                    key={paper.title}
+                    className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group"
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <CardTitle className="font-heading text-sm leading-snug">
+                          {paper.title}
+                        </CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Button
+                        asChild
+                        className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+                      >
+                        <a
+                          href={paper.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Download className="h-4 w-4" />
+                          Download PDF
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
             {/* Foundation and Soul */}
             <Card className="border-2 border-accent/30 bg-gradient-to-br from-card to-accent/5">
               <CardContent className="p-8 space-y-4">
@@ -94,13 +188,13 @@ const SocialSciences = () => {
                   The Foundation and Soul of Islam
                 </h2>
                 <p className="text-center text-foreground/80">
-                  Al-Aql (reason) and Al-Fitrah (natural disposition) are fundamental ways to 
-                  realize the reality of Al-Tawheed, which means the Oneness of Allah (SWT) 
+                  Al-Aql (reason) and Al-Fitrah (natural disposition) are fundamental ways to
+                  realize the reality of Al-Tawheed, which means the Oneness of Allah (SWT)
                   in His Lordship, worship, and Names and Attributes.
                 </p>
                 <div className="islamic-divider mx-auto max-w-xs" />
                 <p className="text-sm italic text-center text-muted-foreground">
-                  The pursuit of knowledge is not merely academic—it is an act of worship 
+                  The pursuit of knowledge is not merely academic—it is an act of worship
                   that brings one closer to understanding the Creator.
                 </p>
               </CardContent>

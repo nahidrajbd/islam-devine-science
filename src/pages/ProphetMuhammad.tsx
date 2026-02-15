@@ -1,41 +1,214 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, HandHeart, Scale, Download } from "lucide-react";
+import { FileText, HandHeart, Scale, Download, BookOpen, Microscope, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Import PDF files
-import habitsOfProphetPdf from "@/assets/chapters/Prophet_Muhammad/HABITS_OF_THE_PROPHET_MUHAMMAD_THAT_SCIE.pdf";
-import healthyHabitsPdf from "@/assets/chapters/Prophet_Muhammad/HEALTYH_HABITS_OF_THE_PROHET.pdf";
-import medicinePdf from "@/assets/chapters/Prophet_Muhammad/MEDICINE_OF_THE_PROPHET.pdf";
-import scienceSayingsPdf from "@/assets/chapters/Prophet_Muhammad/SCIENCE_AND_THE_PROPHETS_SAYINGS.pdf";
-import leadershipPdf from "@/assets/chapters/Prophet_Muhammad/Top_Leadership_Qualities_of_the_Holy_Pro.pdf";
-import teachingMethodsPdf from "@/assets/chapters/Prophet_Muhammad/teachings_of_the_prophet.pdf";
+interface ResearchPaper {
+  title: string;
+  downloadUrl: string;
+}
 
-const researchPapers = [
+interface ResearchCategory {
+  category: string;
+  icon: typeof BookOpen;
+  papers: ResearchPaper[];
+}
+
+const researchCategories: ResearchCategory[] = [
   {
-    title: "Habits of the Prophet Muhammad that Science Supports",
-    pdfFile: habitsOfProphetPdf,
+    category: "Discover Islam",
+    icon: BookOpen,
+    papers: [
+      {
+        title: "Acid Hydrolysis of Cellulose - Part I. Experimental Kinetic Analysis",
+        downloadUrl: "https://drive.google.com/file/d/1ogAL0-zIJ2CrFr3-la2v50KVm_tRUSiv/view?usp=sharing",
+      },
+      {
+        title: "Acid Hydrolysis of Cellulose - Part II: Stochastic Simulation using a Monte Carlo Technique",
+        downloadUrl: "https://drive.google.com/file/d/1t07yzcb3THn7S7S4N_F0QGczl1TzIFI0/view?usp=sharing",
+      },
+      {
+        title: "Black Powder in Sales Gas Pipelines: Sources and Technical Recommendations",
+        downloadUrl: "https://drive.google.com/file/d/1myLkLR6Cuqy3X8qEKar5QifIbvWu6oxf/view?usp=sharing",
+      },
+      {
+        title: "Decision Support for Sustainability Management",
+        downloadUrl: "https://drive.google.com/file/d/1snDL1o4Op_G_7kl76V0u9OUMc1T2uUuL/view?usp=sharing",
+      },
+      {
+        title: "Absorption rates of carbon dioxide and hydrogen sulphide in sterically hindered amines",
+        downloadUrl: "https://drive.google.com/file/d/1XWFV5chrhmT-JeM0QVPXS6gTiGKrOq62/view?usp=sharing",
+      },
+      {
+        title: "Energy Efficiency of a Simulated Synthetic Natural Gas Combined Cycle (SNGCC)",
+        downloadUrl: "https://drive.google.com/file/d/1T7jE5cZDLtxlYr1dt1-pqITBj9xjWdWG/view?usp=sharing",
+      },
+      {
+        title: "An Introductory Chemical Engineering Course Based on Analogies and Research-Based Learning",
+        downloadUrl: "https://drive.google.com/file/d/174vaV7XBsoIWV5e6M31da4U1b0VRAmh6/view?usp=sharing",
+      },
+      {
+        title: "Effect of Summer Weather Conditions on the Environmental Impact of a Power Plant in the UAE",
+        downloadUrl: "https://drive.google.com/file/d/1F-nDNEaEjt794Jbc4JZ0wWn8H-Hf8EXn/view?usp=sharing",
+      },
+      {
+        title: "The Utilization of a Universal Concept for the Modelisation of Consumer Spending",
+        downloadUrl: "https://drive.google.com/file/d/1MTdMJNdpemqPHBoKLiOFWJ2muP4ZcXL1/view?usp=sharing",
+      },
+      {
+        title: "Workforce Management",
+        downloadUrl: "https://drive.google.com/file/d/12KuOWpJWecCiHOGEbr5hZW478NCNU3VD/view?usp=sharing",
+      },
+    ],
   },
   {
-    title: "Healthy Habits of the Prophet",
-    pdfFile: healthyHabitsPdf,
+    category: "Islam & Sciences",
+    icon: Microscope,
+    papers: [
+      {
+        title: "THE FOUNDATION OF ISLAM",
+        downloadUrl: "https://drive.google.com/file/d/1eWK2eDXl_LBTunekNKJ7x4NfwfMW1k-s/view?usp=sharing",
+      },
+      {
+        title: "The Creator (SWT)",
+        downloadUrl: "https://drive.google.com/file/d/1pTD6-KFC-k82REQ9T7Nc41VCwZk4J-g_/view?usp=sharing",
+      },
+      {
+        title: "Need for Re-Islamization of Science",
+        downloadUrl: "https://drive.google.com/file/d/1f4h6t47RA3XLUlarPzJkqVnM9ZC8Ein5/view?usp=sharing",
+      },
+      {
+        title: "Islamic Approach to Science",
+        downloadUrl: "https://drive.google.com/file/d/1FzddCf9UgFG7wrg7GKf_YNocgP8hedwc/view?usp=sharing",
+      },
+      {
+        title: "Islam & Science",
+        downloadUrl: "https://drive.google.com/file/d/1HakP8Z3uK0EtCB2d0i_yx2-T4ypYXiiz/view?usp=sharing",
+      },
+    ],
   },
   {
-    title: "Medicine of the Prophet",
-    pdfFile: medicinePdf,
+    category: "Natural Science",
+    icon: Microscope,
+    papers: [
+      {
+        title: "Divine Law of Conservation",
+        downloadUrl: "https://drive.google.com/file/d/1jD8ZP8lvLqH96xuA8XBwxSBH0lklKmBX/view?usp=sharing",
+      },
+      {
+        title: "Islam & Botany",
+        downloadUrl: "https://drive.google.com/file/d/1jhZ4m22m9lOdLA66F54mwlsd9nQN45q-/view?usp=sharing",
+      },
+      {
+        title: "Islam & Chemistry",
+        downloadUrl: "https://drive.google.com/file/d/1MnFq5w7XiH9HfcvfWe_9hhNcgBziAUM2/view?usp=sharing",
+      },
+      {
+        title: "Islam & Earth Sciences",
+        downloadUrl: "https://drive.google.com/file/d/1qfw3VBsGvLu8bNMHTJ0n9aWylURqMbeH/view?usp=sharing",
+      },
+      {
+        title: "Mathematics in Islam",
+        downloadUrl: "https://drive.google.com/file/d/1tssps9C4-MBWlteEp_3_nJenkfcmeYMZ/view?usp=sharing",
+      },
+      {
+        title: "Islam & Medical Sciences",
+        downloadUrl: "https://drive.google.com/file/d/10fVuc6HdBg1KRJDSJzef1JMUw0fUxAB6/view?usp=sharing",
+      },
+      {
+        title: "Physical Sciences",
+        downloadUrl: "https://drive.google.com/file/d/1XH4zNtA0vgV0N5P8BA1rOI1Y3ZPEx5AR/view?usp=sharing",
+      },
+      {
+        title: "Zoology in Islam",
+        downloadUrl: "https://drive.google.com/file/d/1lbj18bpBUmNkUfDz5AL3uzVCFVt7DR9a/view?usp=sharing",
+      },
+    ],
   },
   {
-    title: "Science and the Prophet's Sayings",
-    pdfFile: scienceSayingsPdf,
+    category: "Social Science",
+    icon: Users,
+    papers: [
+      {
+        title: "THE ETERNAL PATH OF CHARITY",
+        downloadUrl: "https://drive.google.com/file/d/1cKvUAaCV0Yzx9vGkxH0eQbPTYLROGrje/view?usp=sharing",
+      },
+      {
+        title: "Tawhidic Paradigm",
+        downloadUrl: "https://drive.google.com/file/d/1wfMEnrzXPkCBrlRX36_yxgveZdtyF9gl/view?usp=sharing",
+      },
+      {
+        title: "Spirituality in Islam",
+        downloadUrl: "https://drive.google.com/file/d/1xQAxes4GkZB0H8Ih_tcZbhccAyMPW8GD/view?usp=sharing",
+      },
+      {
+        title: "Scientific facts in the Quran",
+        downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
+      },
+      {
+        title: "LEADERSHIP IN WORKPLACES",
+        downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
+      },
+      {
+        title: "Law of Balance",
+        downloadUrl: "https://drive.google.com/file/d/1lpzV3IMzf_mkpiXnlAHAcXyZo9f5EF51/view?usp=sharing",
+      },
+      {
+        title: "ISLAM-BASED EDUCATIONAL MODEL",
+        downloadUrl: "https://drive.google.com/file/d/1OgYnHdOUGZ2l4-nSIQ7iQnm-ztK_4ejs/view?usp=sharing",
+      },
+      {
+        title: "DIVINE FORCES AND LAWS IN MUSLIM SOCIETIES",
+        downloadUrl: "https://drive.google.com/file/d/10XHWKZGiV9y-prIFGuPELuoIZWOtpV91/view?usp=sharing",
+      },
+      {
+        title: "Divine Forces",
+        downloadUrl: "https://drive.google.com/file/d/1h7TgDDvxWG3nSg7k1GddALdd18kdm9DW/view?usp=sharing",
+      },
+      {
+        title: "CONSUMERISM & WARNINGS FROM THE MERCIFUL",
+        downloadUrl: "https://drive.google.com/file/d/1UZbfg8IJ8vdkzcnRpBUY5z34Fwzgeabp/view?usp=sharing",
+      },
+      {
+        title: "CHARITY IN WORKPLACES",
+        downloadUrl: "https://drive.google.com/file/d/1w_ng4_YgsZZb6fZtekO8XrOn0AaplH-p/view?usp=sharing",
+      },
+    ],
   },
   {
-    title: "Top Leadership Qualities of the Holy Prophet",
-    pdfFile: leadershipPdf,
-  },
-  {
-    title: "6 Teaching Methods of Prophet Muhammad (PBUH)",
-    pdfFile: teachingMethodsPdf,
+    category: "Divine Forces and Divine Laws",
+    icon: Sparkles,
+    papers: [
+      {
+        title: "Scientific facts in the Quran",
+        downloadUrl: "https://drive.google.com/file/d/1fmotAj30bcDw4MpH1iZE-4S5VatA2qVK/view?usp=sharing",
+      },
+      {
+        title: "Laws of Creation and Decay",
+        downloadUrl: "https://drive.google.com/file/d/1bVJ1ynsrKB7khQn1apQq17OAOuFf9rLp/view?usp=sharing",
+      },
+      {
+        title: "Law of Balance",
+        downloadUrl: "https://drive.google.com/file/d/1XYjMjbj_mNzjrwD0q_tofUXURl-3L3iH/view?usp=sharing",
+      },
+      {
+        title: "CHARITY: THE DIVINE SCIENCE OF ALLAH SWT",
+        downloadUrl: "https://drive.google.com/file/d/1UEiH7nbRFEgCHETDhVyyytHQSlOq-hWF/view?usp=sharing",
+      },
+      {
+        title: "The Divine Laws of Charity: The Islamic Solution to Consumerism and Its Consequences",
+        downloadUrl: "https://drive.google.com/file/d/1If74k3L9bJC6rc8VhaEqFI3wYs8lDxcl/view?usp=sharing",
+      },
+      {
+        title: "Divine laws of charity",
+        downloadUrl: "https://drive.google.com/file/d/1ZJaat34K7mI7di3kutnkXvr8O868CgW0/view?usp=sharing",
+      },
+      {
+        title: "Divine Forces",
+        downloadUrl: "https://drive.google.com/file/d/1cen8EkkdnFU0mM5HNY16lQBZhbi2HGLR/view?usp=sharing",
+      },
+    ],
   },
 ];
 
@@ -70,43 +243,65 @@ const ProphetMuhammad = () => {
             </Card>
 
             {/* Research Papers */}
-            <div className="space-y-6">
-              <h2 className="font-heading text-2xl font-bold text-foreground text-center">
-                The research about Prophet Muhammad (PBUH) by Zin Eddine Dadach
-              </h2>
-              <div className="text-center mb-6">
-                <p className="text-sm text-muted-foreground italic">
+            <div className="space-y-8">
+              <div className="text-center space-y-4">
+                <h2 className="font-heading text-3xl font-bold text-foreground">
+                  Research by Zin Eddine Dadach
+                </h2>
+                <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
                   "They said: 'Glory to You! We have no knowledge except what You taught us.
                   You, indeed You, are the All-Knowing, the Wise.'" — Quran 2:32
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {researchPapers.map((paper) => (
-                  <Card key={paper.title} className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group">
-                    <CardHeader className="text-center pb-2">
-                      <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
-                        <FileText className="h-6 w-6 text-primary" />
+
+              {researchCategories.map((category) => {
+                const IconComponent = category.icon;
+                return (
+                  <div key={category.category} className="space-y-4">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <IconComponent className="h-5 w-5 text-primary" />
                       </div>
-                      <CardTitle className="font-heading text-base leading-snug">{paper.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-center">
-                      <Button
-                        asChild
-                        className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
-                      >
-                        <a
-                          href={paper.pdfFile}
-                          download
-                          className="flex items-center justify-center gap-2"
+                      <h3 className="font-heading text-xl font-bold text-foreground">
+                        {category.category}
+                      </h3>
+                    </div>
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                      {category.papers.map((paper) => (
+                        <Card
+                          key={paper.title}
+                          className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group"
                         >
-                          <Download className="h-4 w-4" />
-                          Download PDF
-                        </a>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                          <CardHeader className="pb-3">
+                            <div className="flex items-start gap-2">
+                              <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                              <CardTitle className="font-heading text-sm leading-snug">
+                                {paper.title}
+                              </CardTitle>
+                            </div>
+                          </CardHeader>
+                          <CardContent>
+                            <Button
+                              asChild
+                              className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+                            >
+                              <a
+                                href={paper.downloadUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-2"
+                              >
+                                <Download className="h-4 w-4" />
+                                Download PDF
+                              </a>
+                            </Button>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Charity and Compassion */}
