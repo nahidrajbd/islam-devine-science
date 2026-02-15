@@ -2,218 +2,145 @@ import { Layout } from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, MapPin, Calendar, Award } from "lucide-react";
-import zinPhoto from "@/assets/zin.jpg";
-
-const timeline = [
-  {
-    year: "1957",
-    event: "Born in Beni Saf, Ain Temouchent, Algeria",
-    icon: MapPin,
-  },
-  {
-    year: "1980",
-    event: "Bachelor's Degree in Refining and Petro-Chemistry from Algerian Institute of Petroleum",
-    icon: GraduationCap,
-  },
-  {
-    year: "1984",
-    event: "Master's Degree in Chemical Engineering from Stevens Institute of Technology, New Jersey, USA",
-    icon: GraduationCap,
-  },
-  {
-    year: "1994",
-    event: "Ph.D. in Chemical Engineering from Laval University, Quebec, Canada",
-    icon: Award,
-  },
-  {
-    year: "1994-1996",
-    event: "Specialization in Biotechnology at Osaka National Research Institute, Japan",
-    icon: GraduationCap,
-  },
-  {
-    year: "2005-2022",
-    event: "Academic Faculty at Higher Colleges of Technology, Chemical Engineering Department, Abu Dhabi, UAE",
-    icon: GraduationCap,
-  },
-];
+import { BookOpen, Lightbulb, Target, Heart } from "lucide-react";
 
 const About = () => {
   return (
     <Layout>
       <SEO
-        title="About Zin Eddine Dadach & The Mission | Islam & Sciences"
-        description="Learn about the researcher Zin Eddine Dadach and his mission to highlight the scientific contributions of Islamic civilization and Divine Science."
+        title="About Islam & Divine Science | Reconnecting Creation with the Creator"
+        description="Discover our vision of the universe as a Visible Book of Signs, bridging faith and science through Divine Science, Quranic reflections, and Islamic scholarship."
       />
       <PageHeader
-        title="About"
-        subtitle="The journey, research, and dedication of Prof. Zin Eddine Dadach"
+        title="About Islam & Divine Science"
+        subtitle="Reconnecting Creation with the Creator"
       />
 
       <section className="py-12">
         <div className="container">
           <div className="max-w-4xl mx-auto space-y-12">
-            {/* Author Bio */}
+            {/* Vision Section */}
             <Card className="border-2 border-primary/20">
               <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                  {/* Photo */}
-                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 shrink-0 shadow-xl">
-                    <img
-                      src={zinPhoto}
-                      alt="Prof. Zin Eddine Dadach"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="text-center md:text-left space-y-4">
-                    <h2 className="font-heading text-2xl font-bold text-primary">
-                      Prof. Zin Eddine Dadach
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Researcher in Islam and Science | Charity | Compassion | Five Pillars of Islam | Gratitude | Guidance
-                    </p>
-                    <blockquote className="quran-verse text-foreground/80 border-l-4 border-accent pl-4 text-sm mt-4">
-                      "Glory be to You, we have no knowledge except what you have taught us. Verily, it is You, the All-Knowing, the All-Wise.” (Quran 2:32)
-                    </blockquote>
-
-                  </div>
+                <div className="space-y-4">
+                  <h2 className="font-heading text-2xl font-bold text-primary flex items-center gap-3">
+                    <BookOpen className="h-7 w-7 text-accent" />
+                    Our Vision: The Universe as a Visible Book of Signs
+                  </h2>
+                  <p className="text-lg text-foreground/80 leading-relaxed">
+                    Islam & Divine Science is the realization of a profound vision: to demonstrate that the universe is far more than mere matter and equations. It is a <strong>"Visible Book of Signs"</strong> (The Silent Quran) pointing directly to the Oneness of Allah (SWT).
+                  </p>
+                  <p className="text-lg text-foreground/80 leading-relaxed">
+                    We believe that true science does not exist in a vacuum separate from faith. Instead, we champion <strong>Divine Science</strong>, a framework for studying natural laws, energy, biological life, and the vastness of the cosmos as <em>Ayat</em> (Signs). Every discovery in the physical world serves to reveal the infinite wisdom, mercy, and mathematical precision of the Creator.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Biography */}
+            {/* Three Pillars Section */}
             <div className="space-y-6">
-              <h3 className="font-heading text-xl font-bold text-foreground flex items-center gap-2">
+              <h3 className="font-heading text-2xl font-bold text-foreground flex items-center gap-2">
                 <span className="inline-block w-1 h-6 bg-accent rounded-full" />
-                Biography
+                The Three Pillars of Our Mission
               </h3>
-              <div className="text-lg text-foreground/80 leading-loose text-justify space-y-8">
-                <div>
-                  <h4 className="font-heading text-lg font-semibold text-primary mb-2">Researcher in Divine Science & Chemical Engineering</h4>
-                  <p>
-                    Prof. Zin Eddine Dadach is a distinguished scholar whose life work bridges the gap between rigorous scientific inquiry and the spiritual depths of Islamic faith. With over twenty years of experience in applied research, vocational education, and industrial engineering, he has dedicated his career to decarbonization, sustainable energy, and the profound study of Tawheed-based science.
-                  </p>
-                </div>
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                This platform serves as a bridge between the laboratory and the masjid, grounded in three core areas of exploration:
+              </p>
 
-                <div>
-                  <h4 className="font-heading text-lg font-semibold text-primary mb-2">Early Life and Foundations</h4>
-                  <p>
-                    Born in 1957 in the coastal city of Beni Saf, Ain Temouchent, Algeria, Zin Eddine developed an early dedication to knowledge. He began his academic journey at the Algerian Institute of Petroleum, where he obtained his State Engineer Degree (Ingénieur d'état) in Refining and Petro-Chemistry in 1980.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-heading text-lg font-semibold text-primary mb-2">Global Academic Journey & Advanced Research</h4>
-                  <p>
-                    Driven by a pursuit of excellence, Prof. Dadach moved to the United States to further his education. In 1984, he earned his Master of Science in Chemical Engineering from the prestigious Stevens Institute of Technology (New Jersey, USA). His early research there focused on decarbonization, specifically investigating Carbon Dioxide (CO₂) absorption—a critical field for environmental sustainability.
-                  </p>
-                  <p className="mt-4">
-                    He continued his academic pursuit at Laval University in Quebec, Canada, completing his Ph.D. in Chemical Engineering in 1994. His doctoral dissertation focused on the stochastic simulation of cellulose acid hydrolysis, where he developed complex FORTRAN programs (using Markov and Monte Carlo methods) to simulate glucose production.
-                  </p>
-                  <p className="mt-4">
-                    Post-graduation, he expanded his expertise into Biotechnology as a Post-Doctoral Researcher at the Osaka National Research Institute in Japan (1994–1996). There, he conducted interdisciplinary research, applying mathematical Markov analysis to DNA sequences to study gene transcription.
-                  </p>
-                </div>
-
-
-
-                <div>
-                  <h4 className="font-heading text-lg font-semibold text-primary mb-2">Career as an Educator & Academic Leader</h4>
-                  <p>
-                    For nearly two decades (2005–2022), Prof. Dadach shaped the minds of future engineers as an Assistant Professor in the Chemical Engineering Department at the Higher Colleges of Technology (HCT) in Abu Dhabi, UAE.
-                  </p>
-                  <p className="mt-4">
-                    Beyond the classroom, he was a pivotal figure in the engineering community:
-                  </p>
-                  <ul className="list-disc pl-6 mt-2 space-y-2">
-                    <li><strong>Chairman of the AIChE (UAE Chapter):</strong> From 2007 to 2010, he led the American Institute of Chemical Engineers in the UAE, organizing major conferences on Carbon Capture, Solar Energy, and Process Safety.</li>
-                    <li><strong>Applied Research:</strong> He led projects on CO₂ capture supported by the National Research Foundation of the UAE and supervised industrial projects for ADNOC students, covering topics from corrosion to energy efficiency.</li>
-                    <li><strong>Pedagogical Innovation:</strong> He published research on "Active Learning" strategies to increase student motivation in engineering education.</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-heading text-lg font-semibold text-primary mb-2">Divine Science: The Islamization of Sciences</h4>
-                  <p>
-                    Prof. Dadach’s extensive background in "hard sciences"—from molecular distillation to process simulation—fuels his unique mission: demonstrating that the natural universe is a "silent Quran." He advocates for the concept of Tawheed-based science, arguing that scientific discovery is a method of uncovering the Divine Laws set by Allah (SWT).
-                  </p>
-                  <p className="mt-4">
-                    He posits that the Beautiful Name Al-Aleem (The All-Knowing) reflects the attribute of the "Supreme Scientist" who created the universe with precision. Through his work, he invites readers to look at atoms, cells, and galaxies not just as physical matter, but as Ayat (Signs) of the Creator.
-                  </p>
-                  <blockquote className="quran-verse text-foreground/80 border-l-4 border-accent pl-4 mt-6 italic">
-                    "The most sincere manifestation of Muslim faith is to live our life feeling that Allah (SWT) is always with us with His Beautiful Names." — Prof. Zin Eddine Dadach
-                  </blockquote>
-                </div>
-
-                <div>
-                  <h4 className="font-heading text-lg font-semibold text-primary mb-2">Selected Technical Publications</h4>
-                  <ul className="list-disc pl-6 mt-2 space-y-2">
-                    <li>Cost Effective Strategies to Reduce CO₂ Emissions in the UAE (2013)</li>
-                    <li>Simulation of a NGCC Power Generation Plant for the Production of Electricity from CO₂ Emissions (2019)</li>
-                    <li>Black powder in sales gas pipelines: Sources and Technical Recommendations (2020)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Timeline */}
-            <div className="space-y-6">
-              <h3 className="font-heading text-xl font-bold text-foreground flex items-center gap-2">
-                <span className="inline-block w-1 h-6 bg-accent rounded-full" />
-                Academic Journey
-              </h3>
-              <div className="relative">
-                {/* Timeline line */}
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/20" />
-
-                <div className="space-y-6">
-                  {timeline.map((item, index) => (
-                    <div key={index} className="relative pl-12">
-                      {/* Timeline dot */}
-                      <div className="absolute left-0 w-8 h-8 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center">
-                        <item.icon className="h-4 w-4 text-primary" />
+              <div className="grid gap-6 md:grid-cols-1">
+                {/* Pillar 1 */}
+                <Card className="border border-primary/30 hover:border-primary/60 transition-colors">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <BookOpen className="h-6 w-6 text-primary" />
                       </div>
-                      <Card className="border border-border/50">
-                        <CardContent className="p-4">
-                          <div className="flex items-center gap-2 text-sm text-accent font-medium mb-1">
-                            <Calendar className="h-3 w-3" />
-                            {item.year}
-                          </div>
-                          <p className="text-foreground/80">{item.event}</p>
-                        </CardContent>
-                      </Card>
+                      <div>
+                        <h4 className="font-heading text-xl font-semibold text-primary mb-2">
+                          Reflections from the Holy Qur'an
+                        </h4>
+                        <p className="text-foreground/80 leading-relaxed">
+                          We explore the "13 Scientific Facts" mentioned in the Quran, showing how scripture preceded modern discovery.
+                        </p>
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  </CardContent>
+                </Card>
+
+                {/* Pillar 2 */}
+                <Card className="border border-primary/30 hover:border-primary/60 transition-colors">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <Lightbulb className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading text-xl font-semibold text-primary mb-2">
+                          The Islamic Golden Age
+                        </h4>
+                        <p className="text-foreground/80 leading-relaxed">
+                          We honor the legacy of Muslim polymaths whose faith drove them to pioneer medicine, optics, and mathematics, proving that Islam is the ultimate catalyst for scientific inquiry.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Pillar 3 */}
+                <Card className="border border-primary/30 hover:border-primary/60 transition-colors">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <Target className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading text-xl font-semibold text-primary mb-2">
+                          Modern Scientific Inquiry
+                        </h4>
+                        <p className="text-foreground/80 leading-relaxed">
+                          We translate complex concepts in physics, biology, and thermodynamics into accessible language, viewing them through the lens of <em>Tawheed</em>—the principle that all laws of nature belong to Allah alone.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
 
-            {/* Books Section */}
-            <div className="space-y-6">
-              <h3 className="font-heading text-xl font-bold text-foreground flex items-center gap-2">
-                <span className="inline-block w-1 h-6 bg-accent rounded-full" />
-                Books by Zin Eddine Dadach
-              </h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                {[
-                  "Mechanism of Depolymerization of Cellulose in Low Sulfuric Acid Medium. Kinetic Investigation and Stochastic Simulation",
-                  "The Eternal Path of Charity",
+            {/* Resource Section */}
+            <Card className="border-2 border-accent/30 bg-accent/5">
+              <CardContent className="p-8">
+                <div className="space-y-4">
+                  <h3 className="font-heading text-2xl font-bold text-foreground flex items-center gap-3">
+                    <Heart className="h-7 w-7 text-accent" />
+                    A Resource for Seekers, Students, and Teachers
+                  </h3>
+                  <p className="text-lg text-foreground/80 leading-relaxed">
+                    Whether you are a student looking for clarity, a teacher seeking an Islam-based educational model, or a seeker searching for deeper certainty (<em>Yaqeen</em>), this website is built for you.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
 
-                  "An Introductory Chemical Engineering Course Based on Analogies And Research-Based Learning: A Course Designed for Freshmen with Weak Science Background",
-                  "First Quantitative Measurement of Motivation. Study of the Effects of Active Learning Strategies",
-                  "Performance indices of a power plant using exergy-based analyses",
-                  "The Universal Law, Consumer Economy and Global Warming",
-                  "Absorption of Carbon Dioxide and Hydrogen Sulfide by Sterically Hindered Amine Amp: A Pioneering Experimental Research on the Rates of Absorption of ... Amine 2-Amino-2-Methyl-1-Propanol",
-                  "Effects of marketing, bank loan and credit debt on consumer's spending. Mathematical models based on an engineering concept",
-                  "Natural Sciences in the Mirror of Islam",
-                ].map((book, index) => (
-                  <Card key={index} className="border border-border/50 hover:border-primary/50 transition-colors">
-                    <CardContent className="p-4">
-                      <h4 className="font-semibold text-foreground mb-2">{book}</h4>
-                      <p className="text-sm text-muted-foreground">by Zin Eddine Dadach (Goodreads Author)</p>
-                    </CardContent>
-                  </Card>
-                ))}
+            {/* Ultimate Goal Section */}
+            <div className="space-y-6">
+              <h3 className="font-heading text-2xl font-bold text-foreground flex items-center gap-2">
+                <span className="inline-block w-1 h-6 bg-accent rounded-full" />
+                Our Ultimate Goal: Strengthening Certainty
+              </h3>
+              <div className="text-lg text-foreground/80 leading-relaxed space-y-4">
+                <p>
+                  The goal of <strong>Islam & Divine Science</strong> is to deepen the conviction that sincere scientific inquiry is a form of worship. By understanding the "Mirror of Islam," we move from observing the world to knowing its Master.
+                </p>
+                <p>
+                  We invite you to explore, learn, and join us on this path of <em>Sadaqah Jariyah</em> (Ongoing Charity), connecting knowledge with the heart to inspire a life of purpose.
+                </p>
+                <blockquote className="quran-verse text-foreground/80 border-l-4 border-accent pl-6 py-4 italic bg-accent/5 rounded-r-lg">
+                  "The purpose of creating man and all other creatures is to worship Allah alone, and thus helping others and sharing knowledge rises to the highest forms of worship."
+                  <span className="block mt-2 text-sm font-semibold not-italic">
+                    — <a href="https://www.zineddinedadach.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">Prof. Zin Eddine Dadach</a>
+                  </span>
+                </blockquote>
               </div>
             </div>
           </div>
