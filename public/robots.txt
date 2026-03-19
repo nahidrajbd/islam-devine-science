@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.islamdevinescience.com/sitemap.xml
+Sitemap: https://www.islamdivinescience.com/sitemap.xml
