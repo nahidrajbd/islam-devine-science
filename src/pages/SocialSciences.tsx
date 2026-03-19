@@ -45,7 +45,7 @@ const researchPapers = [
     downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
   },
   {
-    title: "LEADERSHIP IN WORKPLACES",
+    title: "LEADERSHIP IN WORPLACES",
     downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
   },
   {

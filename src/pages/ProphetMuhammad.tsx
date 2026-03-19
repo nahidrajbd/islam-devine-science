@@ -25,7 +25,7 @@ const researchCategories: ResearchCategory[] = [
         downloadUrl: "https://drive.google.com/file/d/1ogAL0-zIJ2CrFr3-la2v50KVm_tRUSiv/view?usp=sharing",
       },
       {
-        title: "Acid Hydrolysis of Cellulose - Part II: Stochastic Simulation using a Monte Carlo Technique",
+        title: "Acid Hydrolysis of Cellulose. - Part II: Stochastic Simulation using a Monte Carlo Technique",
         downloadUrl: "https://drive.google.com/file/d/1t07yzcb3THn7S7S4N_F0QGczl1TzIFI0/view?usp=sharing",
       },
       {
@@ -55,6 +55,10 @@ const researchCategories: ResearchCategory[] = [
       {
         title: "The Utilization of a Universal Concept for the Modelisation of Consumer Spending",
         downloadUrl: "https://drive.google.com/file/d/1MTdMJNdpemqPHBoKLiOFWJ2muP4ZcXL1/view?usp=sharing",
+      },
+      {
+        title: "The Utilization of a Universal Concept for the Modelisation of Consumer Spending",
+        downloadUrl: "https://drive.google.com/file/d/1ufs5iD6L0hXu4csjrDCC7V8HQMbhYo_v/view?usp=sharing",
       },
       {
         title: "Workforce Management",
@@ -147,7 +151,7 @@ const researchCategories: ResearchCategory[] = [
         downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
       },
       {
-        title: "LEADERSHIP IN WORKPLACES",
+        title: "LEADERSHIP IN WORPLACES",
         downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
       },
       {
@@ -173,40 +177,6 @@ const researchCategories: ResearchCategory[] = [
       {
         title: "CHARITY IN WORKPLACES",
         downloadUrl: "https://drive.google.com/file/d/1w_ng4_YgsZZb6fZtekO8XrOn0AaplH-p/view?usp=sharing",
-      },
-    ],
-  },
-  {
-    category: "Divine Forces and Divine Laws",
-    icon: Sparkles,
-    papers: [
-      {
-        title: "Scientific facts in the Quran",
-        downloadUrl: "https://drive.google.com/file/d/1fmotAj30bcDw4MpH1iZE-4S5VatA2qVK/view?usp=sharing",
-      },
-      {
-        title: "Laws of Creation and Decay",
-        downloadUrl: "https://drive.google.com/file/d/1bVJ1ynsrKB7khQn1apQq17OAOuFf9rLp/view?usp=sharing",
-      },
-      {
-        title: "Law of Balance",
-        downloadUrl: "https://drive.google.com/file/d/1XYjMjbj_mNzjrwD0q_tofUXURl-3L3iH/view?usp=sharing",
-      },
-      {
-        title: "CHARITY: THE DIVINE SCIENCE OF ALLAH SWT",
-        downloadUrl: "https://drive.google.com/file/d/1UEiH7nbRFEgCHETDhVyyytHQSlOq-hWF/view?usp=sharing",
-      },
-      {
-        title: "The Divine Laws of Charity: The Islamic Solution to Consumerism and Its Consequences",
-        downloadUrl: "https://drive.google.com/file/d/1If74k3L9bJC6rc8VhaEqFI3wYs8lDxcl/view?usp=sharing",
-      },
-      {
-        title: "Divine laws of charity",
-        downloadUrl: "https://drive.google.com/file/d/1ZJaat34K7mI7di3kutnkXvr8O868CgW0/view?usp=sharing",
-      },
-      {
-        title: "Divine Forces",
-        downloadUrl: "https://drive.google.com/file/d/1cen8EkkdnFU0mM5HNY16lQBZhbi2HGLR/view?usp=sharing",
       },
     ],
   },

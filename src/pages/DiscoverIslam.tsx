@@ -81,6 +81,10 @@ const researchPapers = [
     downloadUrl: "https://drive.google.com/file/d/1MTdMJNdpemqPHBoKLiOFWJ2muP4ZcXL1/view?usp=sharing",
   },
   {
+    title: "The Utilization of a Universal Concept for the Modelisation of Consumer Spending",
+    downloadUrl: "https://drive.google.com/file/d/1ufs5iD6L0hXu4csjrDCC7V8HQMbhYo_v/view?usp=sharing",
+  },
+  {
     title: "Workforce Management",
     downloadUrl: "https://drive.google.com/file/d/12KuOWpJWecCiHOGEbr5hZW478NCNU3VD/view?usp=sharing",
   },
