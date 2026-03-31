@@ -40,10 +40,6 @@ const signs = [
 
 const researchPapers = [
   {
-    title: "Scientific facts in the Quran",
-    downloadUrl: "https://drive.google.com/file/d/1fmotAj30bcDw4MpH1iZE-4S5VatA2qVK/view?usp=sharing",
-  },
-  {
     title: "Laws of Creation and Decay",
     downloadUrl: "https://drive.google.com/file/d/1bVJ1ynsrKB7khQn1apQq17OAOuFf9rLp/view?usp=sharing",
   },
