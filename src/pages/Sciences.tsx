@@ -115,6 +115,10 @@ const researchPapers = [
     downloadUrl: "https://drive.google.com/file/d/1MnFq5w7XiH9HfcvfWe_9hhNcgBziAUM2/view?usp=sharing",
   },
   {
+    title: "Chemistry",
+    downloadUrl: "https://drive.google.com/file/d/1QUu6YUBAaBrRHApj5cgulttuOL66vgHP/view?usp=drive_link",
+  },
+  {
     title: "Islam & Earth Sciences",
     downloadUrl: "https://drive.google.com/file/d/1qfw3VBsGvLu8bNMHTJ0n9aWylURqMbeH/view?usp=sharing",
   },
