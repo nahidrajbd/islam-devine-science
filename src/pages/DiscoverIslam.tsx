@@ -1,7 +1,47 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { BookOpen, Moon, Star, ExternalLink } from "lucide-react";
+import { Card, CardContent, CardTitle, CardHeader } from "@/components/ui/card";
+import { BookOpen, Moon, Star, ExternalLink, FileText, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const researchPapers = [
+  {
+    title: "THE CREATOR (SWT)",
+    downloadUrl: "https://drive.google.com/file/d/1GPHzdDk7bK8Xkvisk8twVXQ75a8CFzVa/view"
+  },
+  {
+    title: "The Light “Al-Noor” (SWT)",
+    downloadUrl: "https://drive.google.com/file/d/16wzmJKdCjUgvQvO48n6mqTfdSI4uuoFe/view"
+  },
+  {
+    title: "Tawhidic Paradigm",
+    downloadUrl: "https://drive.google.com/file/d/1k0W3w7nvBPe6u4zDApuwrYHphkcOHphv/view"
+  },
+  {
+    title: "Spirituality in Islam",
+    downloadUrl: "https://drive.google.com/file/d/1KWxkWnPMoT5jgeEg7maPIGQMOh4HbuH0/view"
+  },
+  {
+    title: "ISLAM: THE TRUE LOVE",
+    downloadUrl: "https://drive.google.com/file/d/17yZXv4IdaEC6BpGZTlzlbsAKq8Em_zjo/view"
+  },
+  {
+    title: "INTELLIGENCE IN ISLAM",
+    downloadUrl: "https://drive.google.com/file/d/1uPIx7uVhIK1mNCZIrfmh071HLYhH4797/view"
+  },
+  {
+    title: "CREATED TO BE MUSLIM",
+    downloadUrl: "https://drive.google.com/file/d/1-vr8Qb8yEMEBxCyK5KWB482_pr6JPFev/view"
+  },
+  {
+    title: "CHARITY AS TAUGHT BY QURAN AND PROPHET MUHAMMAD (PBUH)",
+    downloadUrl: "https://drive.google.com/file/d/14-srSQjAZlWKMdqag3ZQ1CAaMl__EZEJ/view"
+  },
+  {
+    title: "Adam (as) : From Clay to Viceroy",
+    downloadUrl: "https://drive.google.com/file/d/1Ecios1T39LuAoAKvcp7z09gFomGhQQOM/view"
+  }
+];
 
 const externalResources = [
   {
@@ -78,6 +118,53 @@ const DiscoverIslam = () => {
                   </Card>
                 </a>
               ))}
+            </div>
+
+            {/* Research Papers */}
+            <div className="space-y-8 mt-16">
+              <div className="text-center space-y-4">
+                <h2 className="font-heading text-3xl font-bold text-foreground">
+                  Research
+                </h2>
+                <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
+                  "They said: 'Glory to You! We have no knowledge except what You taught us.
+                  You, indeed You, are the All-Knowing, the Wise.'" — Quran 2:32
+                </p>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {researchPapers.map((paper) => (
+                  <Card
+                    key={paper.title}
+                    className="border-2 border-border/50 hover:border-primary/30 transition-all islamic-shadow group"
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <CardTitle className="font-heading text-sm leading-snug">
+                          {paper.title}
+                        </CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Button
+                        asChild
+                        className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-medium shadow-md hover:shadow-lg transition-all"
+                      >
+                        <a
+                          href={paper.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Download className="h-4 w-4" />
+                          View Document
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
