@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, HandHeart, Scale, Download, BookOpen } from "lucide-react";
+import { FileText, HandHeart, Scale, Download, BookOpen, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ResearchPaper {
@@ -152,6 +152,14 @@ const ProphetMuhammad = () => {
                       and the most beloved of creatures to Allah is the one who is most beneficial
                       to His dependents."
                     </p>
+                    <a
+                      href="https://backtojannah.com/charity-taught-by-quran-prophet-muhammad/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-accent hover:text-accent/80 font-medium transition-colors mt-2"
+                    >
+                      Read full article <ExternalLink className="ml-1 h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </CardContent>
