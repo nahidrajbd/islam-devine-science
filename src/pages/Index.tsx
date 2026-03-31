@@ -30,13 +30,6 @@ const navigationItems = [
     imageUrl: zinPresentingImg,
   },
   {
-    title: "My Research",
-    description: "Explore the fundamentals: Quran, Sunnah, Tajweed, and my research papers.",
-    href: "/my-research",
-    icon: FileText,
-    imageUrl: quranImg,
-  },
-  {
     title: "Discover Islam",
     description: "Explore external religious resources for deeper understanding.",
     href: "/discover-islam",
