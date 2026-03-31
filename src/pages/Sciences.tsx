@@ -103,20 +103,12 @@ const scienceCategories = [
 
 const researchPapers = [
   {
-    title: "Divine Law of Conservation",
-    downloadUrl: "https://drive.google.com/file/d/1jD8ZP8lvLqH96xuA8XBwxSBH0lklKmBX/view?usp=sharing",
-  },
-  {
     title: "Islam & Botany",
     downloadUrl: "https://drive.google.com/file/d/1jhZ4m22m9lOdLA66F54mwlsd9nQN45q-/view?usp=sharing",
   },
   {
     title: "Islam & Chemistry",
     downloadUrl: "https://drive.google.com/file/d/1MnFq5w7XiH9HfcvfWe_9hhNcgBziAUM2/view?usp=sharing",
-  },
-  {
-    title: "Chemistry",
-    downloadUrl: "https://drive.google.com/file/d/1QUu6YUBAaBrRHApj5cgulttuOL66vgHP/view?usp=drive_link",
   },
   {
     title: "Islam & Earth Sciences",
