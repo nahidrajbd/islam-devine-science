@@ -41,16 +41,8 @@ const researchPapers = [
     downloadUrl: "https://drive.google.com/file/d/1xQAxes4GkZB0H8Ih_tcZbhccAyMPW8GD/view?usp=sharing",
   },
   {
-    title: "Scientific facts in the Quran",
-    downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
-  },
-  {
     title: "LEADERSHIP IN WORPLACES",
     downloadUrl: "https://drive.google.com/file/d/1pXqEjUr9wpRyfSYn3zoZ-fq699NaVBeQ/view?usp=sharing",
-  },
-  {
-    title: "Law of Balance",
-    downloadUrl: "https://drive.google.com/file/d/1lpzV3IMzf_mkpiXnlAHAcXyZo9f5EF51/view?usp=sharing",
   },
   {
     title: "ISLAM-BASED EDUCATIONAL MODEL",
@@ -59,10 +51,6 @@ const researchPapers = [
   {
     title: "DIVINE FORCES AND LAWS IN MUSLIM SOCIETIES",
     downloadUrl: "https://drive.google.com/file/d/10XHWKZGiV9y-prIFGuPELuoIZWOtpV91/view?usp=sharing",
-  },
-  {
-    title: "Divine Forces",
-    downloadUrl: "https://drive.google.com/file/d/1h7TgDDvxWG3nSg7k1GddALdd18kdm9DW/view?usp=sharing",
   },
   {
     title: "CONSUMERISM & WARNINGS FROM THE MERCIFUL",
