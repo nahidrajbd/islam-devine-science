@@ -182,6 +182,14 @@ const ProphetMuhammad = () => {
                       any superiority over an Arab; a white has no superiority over a black, nor does
                       a black have any superiority over a white; except by piety and good action."
                     </p>
+                    <a
+                      href="https://aboutislam.net/blog/rejecting-nepotism-classism-and-racism-just-like-the-prophet-muhammed/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-secondary hover:text-secondary/80 font-medium transition-colors mt-2"
+                    >
+                      Read full article <ExternalLink className="ml-1 h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </CardContent>
