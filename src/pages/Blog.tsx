@@ -131,6 +131,38 @@ const blogPosts = [
     href: "https://themuslimvibe.com/faith-islam/charity-as-taught-by-the-quran-and-prophet-muhammad-pbuh",
     isExternal: true,
   },
+  {
+    title: "Love Overrides Other Values And Is Shown As Foundational In Islam",
+    excerpt: "With His Infinite Love, Allah (SWT) created us to live eternally and happily in Paradise and this short life is only for the divine test.",
+    date: "January 30, 2021",
+    source: "The Muslim Vibe",
+    href: "https://www.newageislam.com/islam-spiritualism/zin-eddine-dadach/love-overrides-other-values-shown-foundational-islam/d/124204",
+    isExternal: true,
+  },
+  {
+    title: "Education In Islam Unequivocally Derived Its Origins From A Symbiotic Relationship With Religious Instruction",
+    excerpt: "An exploration of how education in Islam is fundamentally intertwined with religious and spiritual instruction.",
+    date: "October 27, 2020",
+    source: "The Muslim Vibe",
+    href: "https://www.newageislam.com/islamic-culture/zin-eddine-dadach/education-islam-unequivocally-derived-its-origins-symbiotic-relationship-with-religious-instruction/d/123382",
+    isExternal: true,
+  },
+  {
+    title: "Similar to Nature, Divine Laws of Charity for Muslims Are Also Indicated in The Quran",
+    excerpt: "Examining the divine laws of charity in Islam and how they parallel the perfect balance found in nature.",
+    date: "July 27, 2020",
+    source: "The Muslim Vibe",
+    href: "https://www.newageislam.com/islam-environment/zin-eddine-dadach/similar-nature-divine-laws-charity-muslims-indicated-quran/d/122657",
+    isExternal: true,
+  },
+  {
+    title: "True Enrichment Is the Enrichment of The Soul: Prophet Muhammad (Pbuh)",
+    excerpt: "True enrichment does not come through possessing a lot of wealth, but true enrichment is the enrichment of the soul.",
+    date: "June 16, 2020",
+    source: "The Muslim Vibe",
+    href: "https://www.newageislam.com/spiritual-meditations/zin-eddine-dadach/true-enrichment-enrichment-soul-prophet-muhammad-pbuh/d/122161",
+    isExternal: true,
+  },
 ];
 
 const Blog = () => {
