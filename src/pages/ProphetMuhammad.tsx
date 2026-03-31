@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, HandHeart, Scale, Download, BookOpen, Microscope, Users, Sparkles } from "lucide-react";
+import { FileText, HandHeart, Scale, Download, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ResearchPaper {
@@ -17,28 +17,28 @@ interface ResearchCategory {
 
 const researchCategories: ResearchCategory[] = [
   {
-    category: "Islam & Sciences",
-    icon: Microscope,
+    category: "Prophet Muhammad",
+    icon: BookOpen,
     papers: [
       {
-        title: "THE FOUNDATION OF ISLAM",
-        downloadUrl: "https://drive.google.com/file/d/1eWK2eDXl_LBTunekNKJ7x4NfwfMW1k-s/view?usp=sharing",
+        title: "The Prophet of Excellence",
+        downloadUrl: "https://drive.google.com/file/d/1DlPJomloGNRgJODmLu0vEGPcgaopfssO/view?usp=drive_link",
       },
       {
-        title: "The Creator (SWT)",
-        downloadUrl: "https://drive.google.com/file/d/1pTD6-KFC-k82REQ9T7Nc41VCwZk4J-g_/view?usp=sharing",
+        title: "Our Beloved Teacher",
+        downloadUrl: "https://drive.google.com/file/d/1azvP5abbsPOtGlP09Tkwsh2P-8MWOH2S/view?usp=drive_link",
       },
       {
-        title: "Need for Re-Islamization of Science",
-        downloadUrl: "https://drive.google.com/file/d/1f4h6t47RA3XLUlarPzJkqVnM9ZC8Ein5/view?usp=sharing",
+        title: "Healthy Habits of the Prophet",
+        downloadUrl: "https://drive.google.com/file/d/1et4f71cGpr3IGU-qf5IrdivfRCxhswLB/view?usp=drive_link",
       },
       {
-        title: "Islamic Approach to Science",
-        downloadUrl: "https://drive.google.com/file/d/1FzddCf9UgFG7wrg7GKf_YNocgP8hedwc/view?usp=sharing",
+        title: "Teaching Methods of the Prophet",
+        downloadUrl: "https://drive.google.com/file/d/149KHC5HaswJek2ZyLr3kXwpQzqUMLUly/view?usp=drive_link",
       },
       {
-        title: "Islam & Science",
-        downloadUrl: "https://drive.google.com/file/d/1HakP8Z3uK0EtCB2d0i_yx2-T4ypYXiiz/view?usp=sharing",
+        title: "Medicine of the Prophet",
+        downloadUrl: "https://drive.google.com/file/d/1I5N_9ZuERkq4XmshZcnmu0NHcmOkIe2P/view?usp=drive_link",
       },
     ],
   },

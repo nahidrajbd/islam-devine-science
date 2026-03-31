@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import DiscoverIslam from "./pages/DiscoverIslam";
+import MyResearch from "./pages/MyResearch";
 import IslamScience from "./pages/IslamScience";
 import ProphetMuhammad from "./pages/ProphetMuhammad";
 import DivineForces from "./pages/DivineForces";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/discover-islam" element={<DiscoverIslam />} />
+          <Route path="/my-research" element={<MyResearch />} />
           <Route path="/islam-science" element={<IslamScience />} />
           <Route path="/prophet-muhammad" element={<ProphetMuhammad />} />
           <Route path="/divine-forces" element={<DivineForces />} />

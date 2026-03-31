@@ -13,6 +13,7 @@ const socialLinks = [
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "My Research", href: "/my-research" },
   { name: "Discover Islam", href: "/discover-islam" },
   { name: "Natural Sciences", href: "/sciences" },
   { name: "Blog", href: "/blog" },

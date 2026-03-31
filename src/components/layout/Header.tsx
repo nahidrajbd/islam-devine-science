@@ -11,6 +11,7 @@ import {
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "My Research", href: "/my-research" },
   { name: "Discover Islam", href: "/discover-islam" },
   { name: "Prophet Muhammad (SAW)", href: "/prophet-muhammad" },
   { name: "Divine Forces & Laws", href: "/divine-forces" },
