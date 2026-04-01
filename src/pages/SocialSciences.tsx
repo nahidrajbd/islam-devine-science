@@ -60,6 +60,42 @@ const researchPapers = [
     title: "CHARITY IN WORKPLACES",
     downloadUrl: "https://drive.google.com/file/d/1w_ng4_YgsZZb6fZtekO8XrOn0AaplH-p/view?usp=sharing",
   },
+  {
+    title: "Social Sciences Document 1",
+    downloadUrl: "https://drive.google.com/file/d/1bTX7qIixLNiKSqhwj94lhNggGVuHDYC0/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 2",
+    downloadUrl: "https://drive.google.com/file/d/1phGalaxsygORG0UdWhjUYiw8PugQ-9Hs/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 3",
+    downloadUrl: "https://drive.google.com/file/d/1eUX3TjPLxF83Oj8-eeRSKeNutp4qsWD7/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 4",
+    downloadUrl: "https://drive.google.com/file/d/1mwR1X3bXY1ZbcqDG5OfewAgGdfjfe0ff/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 5",
+    downloadUrl: "https://drive.google.com/file/d/14HMkahuaQjlHUBMsXh5VtVU31d8r5DdB/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 6",
+    downloadUrl: "https://drive.google.com/file/d/19kBfYuL7XVlCZ5ozSeEFoXTow9Mw63oF/view?usp=sharing",
+  },
+  {
+    title: "Social Sciences Document 7",
+    downloadUrl: "https://drive.google.com/file/d/1Qiv80tV0L9WuqL2z1z67NoDaBTDJLQey/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 8",
+    downloadUrl: "https://drive.google.com/file/d/16L1LaUSvCJHK9kcDj0bVBuSK6G-l5b-n/view?usp=drive_link",
+  },
+  {
+    title: "Social Sciences Document 9",
+    downloadUrl: "https://drive.google.com/file/d/1SXGfR5Cb8h_KFwaoeaExaTiKmcA8dwe8/view?usp=drive_link",
+  },
 ];
 
 const SocialSciences = () => {
