@@ -130,6 +130,10 @@ const researchPapers = [
     title: "Zoology in Islam",
     downloadUrl: "https://drive.google.com/file/d/1lbj18bpBUmNkUfDz5AL3uzVCFVt7DR9a/view?usp=sharing",
   },
+  {
+    title: "Muslim Scientists of the Golden Age",
+    downloadUrl: "https://drive.google.com/file/d/1wUI90fl4-cdy_0KK8XlDLXTMwsHAhusr/view?usp=drive_link",
+  },
 ];
 
 const Sciences = () => {

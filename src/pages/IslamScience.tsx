@@ -52,6 +52,10 @@ const researchPapers = [
     title: "Islam & Science",
     downloadUrl: "https://drive.google.com/file/d/1HakP8Z3uK0EtCB2d0i_yx2-T4ypYXiiz/view?usp=sharing",
   },
+  {
+    title: "Muslim Scientists of the Golden Age",
+    downloadUrl: "https://drive.google.com/file/d/1wUI90fl4-cdy_0KK8XlDLXTMwsHAhusr/view?usp=drive_link",
+  },
 ];
 
 const IslamScience = () => {
