@@ -31,7 +31,7 @@ const navigationItems = [
   },
   {
     title: "Discover Islam",
-    description: "Explore the fundamentals: Quran, Sunnah, Tajweed, and the Beautiful Names of Allah.",
+    description: "Explore external religious resources for deeper understanding.",
     href: "/discover-islam",
     icon: Compass,
     imageUrl: quranImg,

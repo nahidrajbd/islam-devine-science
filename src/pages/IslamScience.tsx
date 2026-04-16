@@ -1,35 +1,10 @@
 import { Layout } from "@/components/layout/Layout";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Atom, Leaf, Mountain, Calculator, FlaskConical, Globe, FileText, Download } from "lucide-react";
+import { FlaskConical, Globe, FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const scienceAreas = [
-  {
-    title: "Mathematics",
-    description: "From algebra to algorithms, Muslim scholars laid the groundwork for modern mathematics.",
-    icon: Calculator,
-    contributions: ["Al-Khwarizmi's Algebra", "Arabic Numerals", "Trigonometry"],
-  },
-  {
-    title: "Physics and Chemistry",
-    description: "Optics, mechanics, and the scientific method were advanced by Islamic scholars.",
-    icon: Atom,
-    contributions: ["Ibn al-Haytham's Optics", "Scientific Method"],
-  },
-  {
-    title: "Medicine, Zoology, and Botany",
-    description: "Medicine, anatomy, and pharmacology flourished during the Islamic Golden Age.",
-    icon: Leaf,
-    contributions: ["Ibn Sina's Canon of Medicine", "Surgery Techniques", "Pharmacology"],
-  },
-  {
-    title: "Astronomy, Geology, and Oceanography",
-    description: "Geography, cartography, and geology were pioneered by Muslim explorers and scholars.",
-    icon: Mountain,
-    contributions: ["Astronomy", "World Maps", "Mineral Classification", "Climate Studies"],
-  },
-];
+
 
 const researchPapers = [
   {
@@ -51,6 +26,10 @@ const researchPapers = [
   {
     title: "Islam & Science",
     downloadUrl: "https://drive.google.com/file/d/1HakP8Z3uK0EtCB2d0i_yx2-T4ypYXiiz/view?usp=sharing",
+  },
+  {
+    title: "Muslim Scientists of the Golden Age",
+    downloadUrl: "https://drive.google.com/file/d/1wUI90fl4-cdy_0KK8XlDLXTMwsHAhusr/view?usp=drive_link",
   },
 ];
 
@@ -110,31 +89,35 @@ const IslamScience = () => {
               </p>
             </div>
 
-            {/* Science Areas Grid */}
-            <div className="grid gap-6 md:grid-cols-2">
-              {scienceAreas.map((area) => (
-                <Card key={area.title} className="border-2 border-border/50 hover:border-primary/30 transition-colors islamic-shadow">
-                  <CardHeader className="pb-2">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <area.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <CardTitle className="font-heading text-lg">{area.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground">{area.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {area.contributions.map((item) => (
-                        <span key={item} className="text-xs px-2 py-1 bg-muted rounded-full text-muted-foreground">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            {/* Science in Islam */}
+            <Card className="border-2 border-primary/20">
+              <CardContent className="p-8 space-y-4">
+                <h2 className="font-heading text-2xl font-bold text-foreground text-center">
+                  Science in Islam
+                </h2>
+                <p className="text-foreground/80 leading-relaxed">
+                  Science in Islam has historically been viewed as a pursuit of knowledge that complements religious faith,
+                  viewing the study of nature as a way to understand God's creation. During the Islamic Golden Age (8th–15th centuries),
+                  Muslim scholars made significant advancements in fields like mathematics, astronomy, and medicine, inventing the
+                  scientific method and laying the foundation for modern science, often driven by the Quranic encouragement to seek knowledge.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Tawhidic Paradigm */}
+            <Card className="border-2 border-accent/30 bg-gradient-to-br from-card to-accent/5">
+              <CardContent className="p-8 space-y-4">
+                <h2 className="font-heading text-2xl font-bold text-foreground text-center">
+                  The Tawhidic Paradigm
+                </h2>
+                <p className="text-foreground/80 leading-relaxed">
+                  The Tawhidic paradigm is an Islamic worldview centered on Tawhid (the oneness of God), which dictates that all aspects
+                  of creation, knowledge, and life are interconnected and subordinate to Divine Law. It serves as an integrated framework
+                  for ethics, science, and social action, emphasizing human stewardship (khalifah) and uniting spiritual (Naqli) with
+                  rational (Aqli) knowledge.
+                </p>
+              </CardContent>
+            </Card>
 
             {/* Research Papers */}
             <div className="space-y-6">
