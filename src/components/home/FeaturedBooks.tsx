@@ -1,83 +1,107 @@
-import { BookOpen, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useRef } from "react";
 import charityBookCover from "@/assets/TheEternalPathofCharity.png";
 import scienceBookCover from "@/assets/NaturalSciencesintheMirrorofIslam.png";
 import arabicBookCover from "@/assets/arabic-book-by-zin-eddine.png";
 import scienceArabicBookCover from "@/assets/natural-science-in-the-mirror-of-islam.png";
+import pedagogyBookCover from "@/assets/IslamicPedagogy.jpg";
 
 const books = [
   {
     title: "الطّريق الأبديّ للصّدقات",
-    description: "كتاب \"الطريق الأبدي للصدقات\" يوضح كيف يحقق الإحسان غاية العبادة ويجلب السكينة الدائمة للقلب.",
-    link: "#",
-    cover: arabicBookCover,
+    desc: "كتاب \"الطريق الأبدي للصدقات\" يوضح كيف يحقق الإحسان غاية العبادة ويجلب السكينة الدائمة للقلب.",
+    img: arabicBookCover,
+    link: "https://drive.google.com/file/d/128slLOA5KRgLpXPKqDgV2eM3GXgFmcWg/view?usp=drive_link"
   },
   {
     title: "The Eternal Path of Charity",
-    description: "Exploring the tranquility and inner joy that comes from charity as an act of worship.",
-    link: "https://www.researchgate.net/publication/377363732_The_Eternal_Path_of_Charity",
-    cover: charityBookCover,
+    desc: "Exploring the tranquility and inner joy that comes from charity as an act of worship.",
+    img: charityBookCover,
+    link: "https://drive.google.com/file/d/1GF3i9jOswHTj0Ttfs2Eo8EwAUy4XZfAN/view?usp=drive_link"
   },
   {
     title: "الاسلام والعلوم الطبيعية",
-    description: "كتاب \"الإسلام والعلوم الطبيعية\" يبيّن أن قوانين الكون هي سنن إلهية، وأن دراسة العلوم طريق لمعرفة عظمة الخالق وتعميق اليقين بالتوحيد.",
-    link: "#",
-    cover: scienceArabicBookCover,
+    desc: "كتاب \"الإسلام والعلوم الطبيعية\" يبيّن أن قوانين الكون هي سنن إلهية، وأن دراسة العلوم طريق لمعرفة عظمة الخالق وتعميق اليقين بالتوحيد.",
+    img: scienceArabicBookCover,
+    link: "https://drive.google.com/file/d/1JhgMjAkEX6UKfZ-XB4xvw8b1yEfJqYur/view?usp=drive_link"
   },
   {
     title: "Natural Sciences in the Mirror of Islam",
-    description: "A comprehensive look at how Islamic principles illuminate our understanding of natural sciences.",
-    link: "https://www.amazon.com/Natural-Sciences-Mirror-Eddine-Dadach-ebook/dp/B0GC894XZD",
-    cover: scienceBookCover,
+    desc: "A comprehensive look at how Islamic principles illuminate our understanding of natural sciences.",
+    img: scienceBookCover,
+    link: "https://drive.google.com/file/d/17o7PDYJKnPA2CKwf2Jb11OCe2dbEbXVx/view?usp=drive_link"
   },
+  {
+    title: "Islamic Pedagogy in Modern Times",
+    desc: "A detailed exploration of teaching strategies and educational models based on Islamic values and principles.",
+    img: pedagogyBookCover,
+    link: "https://drive.google.com/file/d/121jIwSvTacYOG6vKMUY_sQCbzO3nU9rN/view?usp=drive_link"
+  }
 ];
 
 export function FeaturedBooks() {
-  return (
-    <section className="py-12 bg-muted/30">
-      <div className="container">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <BookOpen className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Publications</span>
-          </div>
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-            Featured Books
-          </h2>
-        </div>
+  const containerRef = useRef<HTMLDivElement>(null);
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
-          {books.map((book) => (
-            <Card key={book.title} className="border-2 border-primary/20 h-full flex flex-col">
-              <CardHeader className="pb-2">
-                {/* Header content if needed */}
-              </CardHeader>
-              <CardContent className="space-y-4 flex flex-col flex-grow">
-                <div className="w-1/2 mx-auto aspect-[3/4] relative">
-                  <img
-                    src={book.cover}
-                    alt={book.title}
-                    className="w-full h-full object-cover drop-shadow-md rounded-sm"
-                  />
-                </div>
-                <div className="space-y-2 text-center flex-grow">
-                  <h4 className="font-semibold text-foreground text-lg leading-tight">{book.title}</h4>
-                  <p className="text-sm text-muted-foreground">{book.description}</p>
-                </div>
-                <div className="pt-2 mt-auto">
-                  <Button size="sm" variant="outline" className="w-full gap-2" asChild>
-                    <a href={book.link} target="_blank" rel="noopener noreferrer">
-                      <Download className="h-4 w-4" />
-                      Download / View
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    const elements = containerRef.current?.querySelectorAll(".animate-on-scroll");
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements?.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  return (
+    <section className="section bg-alt">
+      <div className="container" ref={containerRef}>
+        <h2
+          className="animate-on-scroll font-heading"
+          style={{ textAlign: 'center', marginBottom: '60px', fontSize: '2.25rem', fontWeight: 'bold' }}
+        >
+          Featured Books
+        </h2>
+
+        <div className="book-grid">
+          {books.map((book, index) => (
+            <div
+              key={index}
+              className="book-card animate-on-scroll"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                transitionDelay: `${index * 150}ms`
+              }}
+            >
+              <div style={{ height: '220px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'transparent', padding: '15px 15px 0' }}>
+                <img src={book.img} alt={book.title} style={{ height: '100%', width: 'auto', objectFit: 'contain' }} />
+              </div>
+              <div className="book-info" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{ marginBottom: '8px', fontSize: '0.95rem' }}>{book.title}</h3>
+                <p style={{ marginBottom: '15px', flexGrow: 1, fontSize: '0.85rem' }}>{book.desc}</p>
+                <a href={book.link} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block', marginTop: 'auto', fontSize: '0.85rem', padding: '8px 12px' }}>
+                  Download / View
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 }
+
+export default FeaturedBooks;
